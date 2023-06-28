@@ -1,5 +1,5 @@
-import Footer from "@/components/layouts/Footer";
-import Header from "../components/layouts/Header";
+import Footer from "@/modules/Footer";
+import Header from "../modules/Header";
 import "./globals.css";
 import { Roboto, Montserrat, Elsie } from "next/font/google";
 import BurgerMenu from "@/components/hook/burgerMenu/BurgerMenu";
@@ -38,7 +38,6 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="">
- 
         <Header />
 
         {children}

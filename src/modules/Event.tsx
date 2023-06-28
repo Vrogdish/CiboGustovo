@@ -1,10 +1,7 @@
 import Typography from "@/components/design/typography/Typography";
 import React from "react";
 import Image from "next/image";
-import{eventsData} from "../../data/data"
-
-
-
+import { eventsData } from "../data/data";
 
 export default function Event() {
   return (

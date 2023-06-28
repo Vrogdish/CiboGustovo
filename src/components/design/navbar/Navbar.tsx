@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 interface props {
     children : ReactNode
-    className : string
+    className? : string
 }
 
 export default function Navbar({children,className} : props) {

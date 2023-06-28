@@ -1,8 +1,8 @@
-import About from "@/components/section/About";
-import Event from "@/components/section/Event";
-import HeroSection from "@/components/section/HeroSection";
-import Menu from "@/components/section/Menu";
-import Team from "@/components/section/Team";
+import About from "@/modules/About";
+import Event from "@/modules/Event";
+import HeroSection from "@/modules/HeroSection";
+import Menu from "@/modules/Menu";
+import Team from "@/modules/Team";
 
 export default function Home() {
   return (

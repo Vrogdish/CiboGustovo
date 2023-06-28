@@ -4,7 +4,7 @@ import Slider from "@/components/hook/swiper/Slider";
 import Button from "@/components/design/buttons/Button";
 import Typography from "@/components/design/typography/Typography";
 import React, { useState } from "react";
-import FilterMenu from "../design/filter/FilterMenu";
+import FilterMenu from "../components/design/filter/FilterMenu";
 import { platsData } from "@/data/data";
 import { drinksData } from "@/data/data";
 

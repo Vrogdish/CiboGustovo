@@ -1,9 +1,7 @@
 import Typography from "@/components/design/typography/Typography";
 import React from "react";
-import Slider from "../hook/swiper/Slider";
+import Slider from "../components/hook/swiper/Slider";
 import { aboutData } from "@/data/data";
-
-
 
 export default function About() {
   return (

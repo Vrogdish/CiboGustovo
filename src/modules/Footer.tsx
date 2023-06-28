@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import React from "react";
-import Navbar from "../design/navbar/Navbar";
+import Navbar from "../components/design/navbar/Navbar";
 import Typography from "@/components/design/typography/Typography";
 import { scrollToId } from "@/scripts/scrollToId";
 
