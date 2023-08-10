@@ -1,6 +1,27 @@
-import { elsie, montserrat, roboto } from "@/app/layout";
 import clsx from "clsx";
+import { Roboto, Montserrat, Elsie } from "next/font/google";
 import React, { ReactNode } from "react";
+
+export const roboto = Roboto({
+  weight: ["400", "700"],
+  style: "normal",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const montserrat = Montserrat({
+  weight: "700",
+  style: "normal",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const elsie = Elsie({
+  weight: "900",
+  style: "normal",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 interface props {
   children: ReactNode;
