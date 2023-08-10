@@ -3,38 +3,31 @@
 import React from "react";
 import Navbar from "../components/design/navbar/Navbar";
 import Typography from "@/components/design/typography/Typography";
-import { scrollToId } from "@/scripts/scrollToId";
 
 export default function Footer() {
+  const menuList = [
+    {
+      title : "Menu",
+      id : "menu"
+    },
+    {
+      title : "Team",
+      id : "team"
+    },
+    {
+      title : "Events",
+      id : "events"
+    },
+    {
+      title : "Contact",
+      id : "contact"
+    }
+
+  ]
+
   return (
     <div className="bg-main-70 grid grid-cols-3  px-40 py-10 ">
-      <Navbar>
-        <li
-          onClick={() => {
-            scrollToId("menu");
-          }}
-          className="cursor-pointer"
-        >
-          Menu
-        </li>
-        <li
-          onClick={() => {
-            scrollToId("team");
-          }}
-          className="cursor-pointer"
-        >
-          Team
-        </li>
-        <li
-          onClick={() => {
-            scrollToId("events");
-          }}
-          className="cursor-pointer"
-        >
-          Events
-        </li>
-        <li>Contact</li>
-      </Navbar>
+      <Navbar navList={menuList} />
       <Typography variant="logo" className="text-center">
         Cibo gustovo
       </Typography>
