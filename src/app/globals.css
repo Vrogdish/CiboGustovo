@@ -9,3 +9,13 @@ body {
     position: relative;
    
 }
+
+.linkEffect {
+    
+    transform: translate(-100%);
+    transition: all ease-in 0.2s;
+}
+
+.navlink:hover .linkEffect{
+    transform: translate(0);
+}

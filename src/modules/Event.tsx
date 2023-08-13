@@ -10,16 +10,17 @@ export default function Event() {
         Events
       </Typography>
 
-      <div className="grid grid-cols-2 gap-6 px-40 ">
+      <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto px-6 ">
         {eventsData.map((element, index) => (
-          <Image
-            src={element.src}
-            alt={element.alt}
-            key={index}
-            width={1000}
-            height={1000}
-            className="w-full h-[40rem] object-cover"
-          />
+          <div key={index} className="relative h-[400px] xl:h-[640px]">
+            <Image
+              src={element.src}
+              alt={element.alt}
+              fill
+              sizes="100vw"
+              className=" object-cover"
+            />
+          </div>
         ))}
       </div>
     </div>

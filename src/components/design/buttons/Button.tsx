@@ -2,11 +2,11 @@
 
 import React, { ReactNode, useState } from "react";
 
-interface props {
+interface Props {
   children: ReactNode;
   handleclick: any;
   id: string;
-  className: string;
+  className?: string;
 
 }
 
@@ -16,13 +16,13 @@ export default function Button({
   id,
   className
 
-}: props) {
+}: Props) {
  
 
   return (
     <button
       type="button"
-      className={`py-4 px-10 border border-main-70 rounded-xl hover:bg-main-70 transition-all ${className}`}
+      className={`py-4  border border-main-70 rounded-xl hover:bg-main-70 transition-all text-center ${className}`}
       id={id}
       onClick={handleclick}
     >

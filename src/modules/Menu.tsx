@@ -1,16 +1,19 @@
 "use client";
 
-import Slider from "@/components/hook/swiper/Slider";
 import Button from "@/components/design/buttons/Button";
 import Typography from "@/components/design/typography/Typography";
 import React, { useState } from "react";
 import FilterMenu from "../components/design/filter/FilterMenu";
 import { platsData } from "@/data/data";
 import { drinksData } from "@/data/data";
+import MenuSlider from "@/components/hook/MenuSlider/MenuSlider";
+import DrinkSlider from "@/components/hook/drinkSlider/DrinkSlider";
+import Swiper from "swiper";
 
 export default function Menu() {
   const [menu, setMenu] = useState(platsData);
   const [active, setActive] = useState("0");
+  const [drinkIndex, setDrinkIndex]= useState(0)
 
   const filter = (category: string) => {
     const result = platsData.filter((element) => element.category == category);
@@ -21,7 +24,10 @@ export default function Menu() {
     const category = e.target.textContent.toLowerCase();
     filter(category);
     setActive(e.target.id);
+    
   };
+
+  const drinkActive = (swiper : Swiper) => {setDrinkIndex(swiper.activeIndex)}
 
   return (
     <div className="bg-main-80 " id="menu">
@@ -33,14 +39,14 @@ export default function Menu() {
       >
         Menu
       </Typography>
-      <Typography className="text-center w-1/3 m-auto">
+      <Typography className="text-center md:w-1/3 md:px-10 m-auto">
         Lacus lobortis nullam nam consectetur fermentum mattis pellentesque id
         nulla. Risus convallis iaculis risus ac aliquam sit ultricies.
         Adipiscing adipiscing pellentesque tincidunt vitae. Aliquam dolor
         egestas nam congue elit dolor.
       </Typography>
 
-      <div className="m-10 flex justify-center gap-10">
+      <div className="m-10 grid grid-cols-3 lg:grid-cols-6  gap-6 max-w-6xl mx-auto px-10">
         <Button
           id={"1"}
           handleclick={handleclick}
@@ -84,22 +90,12 @@ export default function Menu() {
           Desserts
         </Button>
       </div>
+      <MenuSlider images={menu} className=" lg:max-w-screen-lg mx-auto pb-32" />
 
-      <Slider
-        images={menu}
-        slidesPerView={4}
-        height="h-96"
-        className="w-2/3 m-auto menu"
-      />
+      <div className=" flex flex-col md:flex-row justify-between w-2/3 mx-auto pb-32">
+        <DrinkSlider images={drinksData} handleChange={drinkActive} className="md:w-1/2" />
 
-      <div className="w-2/3 m-auto flex justify-between">
-        <Slider
-          images={drinksData}
-          slidesPerView={1}
-          height="h-[35rem]"
-          className="w-1/3 overflow-hidden"
-        />
-        <FilterMenu />
+        <FilterMenu drinkIndex={drinkIndex}/>
       </div>
     </div>
   );

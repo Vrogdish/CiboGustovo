@@ -198,30 +198,35 @@ export const drinksData = [
     alt: "",
     name: "Lacus lobortis ",
     price: "$5",
+    genre : "cocktail"
   },
   {
     src: "/images/drinks/image2.jpg",
     alt: "",
     name: "Lacus lobortis ",
     price: "$5",
+    genre : "beer"
   },
   {
     src: "/images/drinks/image3.jpg",
     alt: "",
     name: "Lacus lobortis ",
     price: "$5",
+    genre : "wine"
   },
   {
     src: "/images/drinks/image4.jpg",
     alt: "",
     name: "Lacus lobortis ",
     price: "$5",
+    genre : "wine"
   },
   {
     src: "/images/drinks/image5.jpg",
     alt: "",
     name: "Lacus lobortis ",
     price: "$5",
+    genre : "cocktail"
   },
 ];
 

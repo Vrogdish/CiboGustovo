@@ -2,30 +2,29 @@ import { scrollToId } from "@/scripts/scrollToId";
 import React from "react";
 
 interface Props {
-  className? : string
-  navList : {
-    title : string
-    id : string
-  }[]
-  format? : "column" | "row" 
+  className?: string;
+  navList: {
+    title: string;
+    id: string;
+  }[];
+  format?: "column" | "row";
 }
 
-export default function Navbar({ className, navList, format="row" }: Props) {
+export default function Navbar({ className, navList, format = "row" }: Props) {
+  let formatStyle = "";
 
-let formatStyle = ""
+  switch (format) {
+    case "column":
+      formatStyle = "flex flex-col gap-6";
+      break;
 
-switch (format) {
-  case "column":
-    formatStyle = "flex flex-col gap-6"
-    break;
+    case "row":
+      formatStyle = "flex flex-row gap-4 md:gap-10";
+      break;
 
-  case "row" :
-    formatStyle = "flex flex-row gap-10"
-    break
-
-  default:
-    break;
-}
+    default:
+      break;
+  }
 
   return (
     <nav className={`${className}`}>
@@ -36,9 +35,10 @@ switch (format) {
             onClick={() => {
               scrollToId(item.id);
             }}
-            className="cursor-pointer"
+            className="cursor-pointer overflow-hidden navlink"
           >
-            {item.title}
+            <div className="px-2">{item.title}</div>
+            <div className="h-1 bg-main-80 linkEffect"></div>
           </li>
         ))}
       </ul>

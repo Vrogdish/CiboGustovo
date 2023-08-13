@@ -13,12 +13,12 @@ export default function HeroSection() {
         className="w-full h-full object-cover object-bottom"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-main-0 bg-opacity-40 "></div>
-      <div className="absolute top-1/3 left-0 z-20 ml-40">
+      <div className="absolute top-1/3 left-0 z-20 ml-2 md:ml-20 lg:ml-40">
         <Typography
           variant="h1"
           color="light"
           component="h2"
-          className="text-7xl "
+          
         >
           Made by Italians.
         </Typography>

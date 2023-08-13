@@ -23,7 +23,7 @@ export const elsie = Elsie({
   display: "swap",
 });
 
-interface props {
+interface Props {
   children: ReactNode;
   variant?: "p" | "h1" | "h2" | "h3" | "logo";
   component?: "p" | "h1" | "h2" | "h3";
@@ -37,7 +37,7 @@ export default function Typography({
   variant = "p",
   color = "dark",
   className = "",
-}: props) {
+}: Props) {
   let variantStyle : string = "";
   let variantSize: string = "";
   let variantWeight: string = "";
@@ -50,7 +50,7 @@ export default function Typography({
       break;
     case "h1":
       variantStyle = montserrat.className;
-      variantSize = "text-7xl";
+      variantSize = "text-4xl md:text-6xl lg:text-7xl";
      
       break;
     case "h2":

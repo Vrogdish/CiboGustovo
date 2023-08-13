@@ -4,8 +4,7 @@ import React from "react";
 import Navbar from "../components/design/navbar/Navbar";
 import Typography from "@/components/design/typography/Typography";
 
-export default function Footer() {
-  const menuList = [
+const menuList = [
     {
       title : "Menu",
       id : "menu"
@@ -25,13 +24,14 @@ export default function Footer() {
 
   ]
 
+export default function Footer() {
   return (
-    <div className="bg-main-70 grid grid-cols-3  px-40 py-10 ">
-      <Navbar navList={menuList} />
-      <Typography variant="logo" className="text-center">
+    <div className="bg-main-70 grid  md:grid-cols-2 xl:grid-cols-3  px-10 2xl:px-40 py-10 ">
+      <Navbar navList={menuList} className="mx-auto" />
+      <Typography variant="logo" className="text-center hidden xl:block">
         Cibo gustovo
       </Typography>
-      <div className="flex flex-col gap-6 w-1/2 ml-auto">
+      <div className="flex flex-col gap-6  md:ml-auto px-4 pt-20 md:pt-0">
         <label htmlFor="email">Sign up to our newsletter</label>
         <input
           type="email"
