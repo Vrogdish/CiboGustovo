@@ -22,9 +22,13 @@ export default function Menu() {
 
   const handleclick = (e: any) => {
     const category = e.target.textContent.toLowerCase();
-    filter(category);
-    setActive(e.target.id);
-    
+    if (e.target.id != active) {
+       filter(category);
+    setActive(e.target.id)
+    } else {
+      setMenu(platsData)
+      setActive("0")
+    }
   };
 
   const drinkActive = (swiper : Swiper) => {setDrinkIndex(swiper.activeIndex)}
