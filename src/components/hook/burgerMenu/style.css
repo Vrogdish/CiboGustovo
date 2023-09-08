@@ -7,9 +7,9 @@
     top: 36px;
   }
   
-  /* Color/shape of burger icon bars */
+  /* Color/shape of burger icon bars  #CFD2C6*/
   .bm-burger-bars {
-    background: #CFD2C6;
+    background: #6C7359
   }
   
   /* Color/shape of burger icon bars on hover*/
@@ -35,6 +35,7 @@
   .bm-menu-wrap {
     position: fixed;
     height: 100%;
+   
   }
   
   /* General sidebar styles */
@@ -42,6 +43,7 @@
     background: #373a47;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
+   
   }
   
   /* Morph shape necessary with bubble or elastic */
