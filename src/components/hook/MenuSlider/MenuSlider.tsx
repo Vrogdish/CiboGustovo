@@ -56,9 +56,9 @@ export default function MenuSlider({ images, className }: Props) {
               <Image
                 src={element.src}
                 alt={element.alt}
-                fill
-                sizes="25vw"
-                className="object-cover "
+                width={300}
+                height={400}
+                className="object-cover h-full absolute "
               />
             </div>
             <Typography component="h3" variant="h3" className="text-center">

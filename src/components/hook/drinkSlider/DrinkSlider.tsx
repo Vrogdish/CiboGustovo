@@ -13,11 +13,14 @@ interface Props {
     price: string;
   }[];
   className?: string;
-  handleChange : any
-  
+  handleChange: any;
 }
 
-export default function DrinkSlider({ images, className, handleChange }: Props) {
+export default function DrinkSlider({
+  images,
+  className,
+  handleChange,
+}: Props) {
   return (
     <div className={`${className} flex-col items-end  gap-6 `}>
       <Swiper
@@ -38,9 +41,9 @@ export default function DrinkSlider({ images, className, handleChange }: Props) 
               <Image
                 src={element.src}
                 alt={element.alt}
-                fill
-                sizes="25vw"
-                className="object-cover"
+                width={600}
+                height={600}
+                className="object-cover absolute h-full"
               />
             </div>
             <Typography component="h3" variant="h3" className="text-center">
@@ -52,7 +55,7 @@ export default function DrinkSlider({ images, className, handleChange }: Props) 
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex gap-3 pb-12">
+      <div className="flex gap-3 pb-12 pt-6">
         <div className="drinkPrev cursor-pointer relative w-[50px] h-[50px]">
           <Image
             src={"/images/left-rounded-dark.png"}

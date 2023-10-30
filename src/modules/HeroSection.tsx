@@ -6,8 +6,8 @@ export default function HeroSection() {
   return (
     <div className="h-[58rem] relative ">
       <Image
-        src="/images/heroBG.jpg"
-        alt=""
+        src="/images/heroBG.webp"
+        alt="table with italian foods"
         width={1920}
         height={1272}
         className="w-full h-full object-cover object-bottom"

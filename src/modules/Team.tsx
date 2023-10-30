@@ -24,10 +24,10 @@ export default function Team() {
             <div className="h-[200px] lg:h-[300px] relative">
               <Image
                 src={item.src}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="50vw"
+                alt={item.alt}
+                width={350}
+                height={300}
+                className="object-cover absolute h-full"
               />
             </div>
             <Typography component="h3" variant="h3" className="text-center">

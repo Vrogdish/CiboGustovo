@@ -57,9 +57,9 @@ export default function AboutSlider({ images, className }: Props) {
               <Image
                 src={element.src}
                 alt={element.alt}
-                fill
-                sizes="25vw"
-                className={"object-cover"}
+                width={600}
+                height={300}
+                className={"object-cover absolute h-full"}
               />
             </div>
           </SwiperSlide>

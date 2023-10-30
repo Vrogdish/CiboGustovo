@@ -16,9 +16,9 @@ export default function Event() {
             <Image
               src={element.src}
               alt={element.alt}
-              fill
-              sizes="100vw"
-              className=" object-cover"
+              width={800}
+              height={640}
+              className=" object-cover absolute h-full"
             />
           </div>
         ))}
